@@ -1,0 +1,84 @@
+{
+  "Routes": [
+
+    //Order Service Routes
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5015
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Order/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "SwaggerKey": "Order"
+    },
+
+    //Product Service Routes
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5267
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Product/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "SwaggerKey": "Product"
+    },
+
+    //User Service Routes
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5184
+        }
+      ],
+      "UpstreamPathTemplate": "/api/User/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "SwaggerKey": "User"
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:5102"
+  },
+  "SwaggerEndPoints": [
+    {
+      "Key": "Order",
+      "Config": [
+        {
+          "Name": "Order Service",
+          "Version": "v1",
+          "Url": "http://localhost:5015/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "Product",
+      "Config": [
+        {
+          "Name": "Product Service",
+          "Version": "v1",
+          "Url": "http://localhost:5267/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "User",
+      "Config": [
+        {
+          "Name": "User Service",
+          "Version": "v1",
+          "Url": "http://localhost:5184/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ]
+}

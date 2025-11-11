@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/GatewayService/bin/Debug/net9.0
+/GatewayService/obj
+/OrderService/bin/Debug/net9.0
+/OrderService/obj
+/ProductService/bin/Debug/net9.0
+/ProductService/obj
+/UserService/bin/Debug/net9.0
+/UserService/obj
